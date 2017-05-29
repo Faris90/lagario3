@@ -421,7 +421,7 @@ io.on('connection', function (socket) {
             if(((currentPlayer.cells[i].mass >= c.defaultPlayerMass + c.fireFood) && c.fireFood > 0) || (currentPlayer.cells[i].mass >= 20 && c.fireFood === 0)){
                 var masa = 1;
                 if(c.fireFood > 0)
-                    masa = c.fireFood;
+                    masa = 0;
                 else
                     masa = currentPlayer.cells[i].mass*0.1;
                 currentPlayer.cells[i].mass -= masa;
